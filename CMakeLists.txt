@@ -14,6 +14,15 @@ set (SOURCES
 )
 
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
+
+# This makes headers available in the project were library is used as if
+# `target_include_directories` was used there instead.
+target_include_directories(${PROJECT_NAME}
+        PUBLIC
+            "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
+        INTERFACE
+            "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
+)
 # -----------------------------------------------------------------------------
 
 

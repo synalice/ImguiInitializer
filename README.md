@@ -28,7 +28,7 @@ the `Update()` method. This method will be called over and over while the progra
 After that create an instance of your own class and call `Run()` on it. It's that simple!
 
 ```C++
-#include "thirdparty/ImguiInitializer/ImguiInitializer.h"
+#include <ImguiInitializer.h>
 
 class MyGUI : public ImguiInitializer {
     bool showDemoWindow = true;
