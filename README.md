@@ -19,6 +19,11 @@ This is a bunch of boilerplate code for using "Dear Imgui" _(GLFW + OpenGL3)_.
    add_subdirectory(thirdparty/ImguiInitializer)
    target_link_libraries(${PROJECT_NAME} ImguiInitializer)
    ```
+   You might also want to add `WIN32` to your `add_executable()` so that opening executable file
+   doesn't create an additional console window.
+   ```cmake
+   add_executable(${PROJECT_NAME} WIN32 main.cpp)
+   ```
 
 ### Using in the code
 
